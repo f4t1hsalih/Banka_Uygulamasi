@@ -9,7 +9,7 @@ namespace Banka_Uygulamasi
             InitializeComponent();
         }
 
-        SqlConnection cnn = new SqlConnection("Data Source=SALIH\\SQLEXPRESS;Initial Catalog=krsDbBanka;Integrated Security=True");
+        SqlConnection cnn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=krsDbBanka;Integrated Security=True");
 
         private void lnkKayitOl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

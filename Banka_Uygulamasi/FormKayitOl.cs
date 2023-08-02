@@ -10,7 +10,7 @@ namespace Banka_Uygulamasi
         }
 
         string HesapNo = "0";
-        SqlConnection cnn = new SqlConnection("Data Source=SALIH\\SQLEXPRESS;Initial Catalog=krsDbBanka;Integrated Security=True");
+        SqlConnection cnn = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=krsDbBanka;Integrated Security=True");
 
         void Temizle()
         {
@@ -51,6 +51,14 @@ namespace Banka_Uygulamasi
                 cmd.Parameters.AddWithValue("@p6", txtSifre.Text);
                 cmd.ExecuteNonQuery();
                 cnn.Close();
+
+                cnn.Open();
+                SqlCommand cmd2 = new SqlCommand("insert into tbl_Hesap (HesapNo,Bakiye) values (@p1,@p2)", cnn);
+                cmd2.Parameters.AddWithValue("@p1", HesapNo);
+                cmd2.Parameters.AddWithValue("@p2", 0);
+                cmd2.ExecuteNonQuery();
+                cnn.Close();
+
                 MessageBox.Show("Müşteri Bilgileri Sisteme Kaydedildi");
                 Temizle();
             }

@@ -42,13 +42,15 @@
             label9 = new Label();
             mskHesapNo = new MaskedTextBox();
             label10 = new Label();
+            lblBakiye = new Label();
+            label6 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(38, 32);
+            label1.Location = new Point(86, 23);
             label1.Name = "label1";
             label1.Size = new Size(80, 20);
             label1.TabIndex = 0;
@@ -57,7 +59,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(36, 70);
+            label2.Location = new Point(84, 53);
             label2.Name = "label2";
             label2.Size = new Size(82, 20);
             label2.TabIndex = 1;
@@ -66,7 +68,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(53, 102);
+            label3.Location = new Point(101, 85);
             label3.Name = "label3";
             label3.Size = new Size(65, 20);
             label3.TabIndex = 2;
@@ -75,7 +77,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(41, 135);
+            label4.Location = new Point(89, 118);
             label4.Name = "label4";
             label4.Size = new Size(77, 20);
             label4.TabIndex = 3;
@@ -84,7 +86,7 @@
             // lblAdSoyad
             // 
             lblAdSoyad.AutoSize = true;
-            lblAdSoyad.Location = new Point(124, 32);
+            lblAdSoyad.Location = new Point(172, 23);
             lblAdSoyad.Name = "lblAdSoyad";
             lblAdSoyad.Size = new Size(36, 20);
             lblAdSoyad.TabIndex = 4;
@@ -93,7 +95,7 @@
             // lblHesapNo
             // 
             lblHesapNo.AutoSize = true;
-            lblHesapNo.Location = new Point(124, 70);
+            lblHesapNo.Location = new Point(172, 53);
             lblHesapNo.Name = "lblHesapNo";
             lblHesapNo.Size = new Size(36, 20);
             lblHesapNo.TabIndex = 5;
@@ -102,7 +104,7 @@
             // lblTelefon
             // 
             lblTelefon.AutoSize = true;
-            lblTelefon.Location = new Point(124, 102);
+            lblTelefon.Location = new Point(172, 85);
             lblTelefon.Name = "lblTelefon";
             lblTelefon.Size = new Size(36, 20);
             lblTelefon.TabIndex = 6;
@@ -111,7 +113,7 @@
             // lblTCKimlikNo
             // 
             lblTCKimlikNo.AutoSize = true;
-            lblTCKimlikNo.Location = new Point(124, 135);
+            lblTCKimlikNo.Location = new Point(172, 118);
             lblTCKimlikNo.Name = "lblTCKimlikNo";
             lblTCKimlikNo.Size = new Size(36, 20);
             lblTCKimlikNo.TabIndex = 7;
@@ -124,9 +126,9 @@
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(mskHesapNo);
             groupBox1.Controls.Add(label10);
-            groupBox1.Location = new Point(12, 173);
+            groupBox1.Location = new Point(12, 177);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(264, 147);
+            groupBox1.Size = new Size(264, 145);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             groupBox1.Text = "Havale";
@@ -139,6 +141,7 @@
             btnGonder.TabIndex = 14;
             btnGonder.Text = "Gönder";
             btnGonder.UseVisualStyleBackColor = true;
+            btnGonder.Click += btnGonder_Click;
             // 
             // txtTutar
             // 
@@ -174,13 +177,33 @@
             label10.TabIndex = 9;
             label10.Text = "Hesap No: ";
             // 
+            // lblBakiye
+            // 
+            lblBakiye.AutoSize = true;
+            lblBakiye.Location = new Point(172, 149);
+            lblBakiye.Name = "lblBakiye";
+            lblBakiye.Size = new Size(36, 20);
+            lblBakiye.TabIndex = 10;
+            lblBakiye.Text = "Null";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(107, 149);
+            label6.Name = "label6";
+            label6.Size = new Size(59, 20);
+            label6.TabIndex = 9;
+            label6.Text = "Bakiye: ";
+            // 
             // FormIslemler
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.CadetBlue;
-            ClientSize = new Size(298, 335);
+            ClientSize = new Size(298, 334);
+            Controls.Add(lblBakiye);
+            Controls.Add(label6);
             Controls.Add(groupBox1);
             Controls.Add(lblTCKimlikNo);
             Controls.Add(lblTelefon);
@@ -220,5 +243,7 @@
         private TextBox txtTutar;
         private Label label9;
         private Button btnGonder;
+        private Label lblBakiye;
+        private Label label6;
     }
 }
