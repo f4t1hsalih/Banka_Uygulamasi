@@ -42,7 +42,7 @@ namespace Banka_Uygulamasi
             if (HesapNo != "0" && txtAd.Text != "" && txtSoyad.Text != "" && mskTCKimlik.Text.Length == 11 && mskTelefon.Text != "" && txtSifre.Text != "")
             {
                 cnn.Open();
-                SqlCommand cmd = new SqlCommand("insert into tbl_Kisiler (Ad,Soyad,TC,Telefon,HesapNo) values (@p1,@p2,@p3,@p4,@p5)", cnn);
+                SqlCommand cmd = new SqlCommand("insert into tbl_Kisiler (Ad,Soyad,TC,Telefon,HesapNo,Sifre) values (@p1,@p2,@p3,@p4,@p5,@p6)", cnn);
                 cmd.Parameters.AddWithValue("@p1", txtAd.Text);
                 cmd.Parameters.AddWithValue("@p2", txtSoyad.Text);
                 cmd.Parameters.AddWithValue("@p3", mskTCKimlik.Text);

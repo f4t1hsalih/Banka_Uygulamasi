@@ -57,27 +57,30 @@
             // txtSifre
             // 
             txtSifre.Location = new Point(130, 71);
+            txtSifre.MaxLength = 15;
             txtSifre.Name = "txtSifre";
-            txtSifre.Size = new Size(131, 27);
+            txtSifre.Size = new Size(147, 27);
             txtSifre.TabIndex = 1;
+            txtSifre.UseSystemPasswordChar = true;
             // 
             // mskHesapNo
             // 
             mskHesapNo.Location = new Point(130, 38);
             mskHesapNo.Mask = "000000";
             mskHesapNo.Name = "mskHesapNo";
-            mskHesapNo.Size = new Size(131, 27);
+            mskHesapNo.Size = new Size(147, 27);
             mskHesapNo.TabIndex = 0;
             mskHesapNo.ValidatingType = typeof(int);
             // 
             // btnGiris
             // 
-            btnGiris.Location = new Point(150, 104);
+            btnGiris.Location = new Point(167, 104);
             btnGiris.Name = "btnGiris";
             btnGiris.Size = new Size(82, 30);
             btnGiris.TabIndex = 2;
             btnGiris.Text = "Giriş";
             btnGiris.UseVisualStyleBackColor = true;
+            btnGiris.Click += btnGiris_Click;
             // 
             // lnkKayitOl
             // 
@@ -98,7 +101,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.CadetBlue;
-            ClientSize = new Size(330, 157);
+            ClientSize = new Size(312, 157);
             Controls.Add(lnkKayitOl);
             Controls.Add(btnGiris);
             Controls.Add(mskHesapNo);

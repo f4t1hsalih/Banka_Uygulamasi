@@ -1,6 +1,6 @@
 ﻿namespace Banka_Uygulamasi
 {
-    partial class Form2
+    partial class FormIslemler
     {
         /// <summary>
         /// Required designer variable.
@@ -32,10 +32,10 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
+            lblAdSoyad = new Label();
+            lblHesapNo = new Label();
+            lblTelefon = new Label();
+            lblTCKimlikNo = new Label();
             groupBox1 = new GroupBox();
             btnGonder = new Button();
             txtTutar = new TextBox();
@@ -81,41 +81,41 @@
             label4.TabIndex = 3;
             label4.Text = "TC Kimlik: ";
             // 
-            // label5
+            // lblAdSoyad
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(124, 32);
-            label5.Name = "label5";
-            label5.Size = new Size(36, 20);
-            label5.TabIndex = 4;
-            label5.Text = "Null";
+            lblAdSoyad.AutoSize = true;
+            lblAdSoyad.Location = new Point(124, 32);
+            lblAdSoyad.Name = "lblAdSoyad";
+            lblAdSoyad.Size = new Size(36, 20);
+            lblAdSoyad.TabIndex = 4;
+            lblAdSoyad.Text = "Null";
             // 
-            // label6
+            // lblHesapNo
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(124, 70);
-            label6.Name = "label6";
-            label6.Size = new Size(36, 20);
-            label6.TabIndex = 5;
-            label6.Text = "Null";
+            lblHesapNo.AutoSize = true;
+            lblHesapNo.Location = new Point(124, 70);
+            lblHesapNo.Name = "lblHesapNo";
+            lblHesapNo.Size = new Size(36, 20);
+            lblHesapNo.TabIndex = 5;
+            lblHesapNo.Text = "Null";
             // 
-            // label7
+            // lblTelefon
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(124, 102);
-            label7.Name = "label7";
-            label7.Size = new Size(36, 20);
-            label7.TabIndex = 6;
-            label7.Text = "Null";
+            lblTelefon.AutoSize = true;
+            lblTelefon.Location = new Point(124, 102);
+            lblTelefon.Name = "lblTelefon";
+            lblTelefon.Size = new Size(36, 20);
+            lblTelefon.TabIndex = 6;
+            lblTelefon.Text = "Null";
             // 
-            // label8
+            // lblTCKimlikNo
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(124, 135);
-            label8.Name = "label8";
-            label8.Size = new Size(36, 20);
-            label8.TabIndex = 7;
-            label8.Text = "Null";
+            lblTCKimlikNo.AutoSize = true;
+            lblTCKimlikNo.Location = new Point(124, 135);
+            lblTCKimlikNo.Name = "lblTCKimlikNo";
+            lblTCKimlikNo.Size = new Size(36, 20);
+            lblTCKimlikNo.TabIndex = 7;
+            lblTCKimlikNo.Text = "Null";
             // 
             // groupBox1
             // 
@@ -126,7 +126,7 @@
             groupBox1.Controls.Add(label10);
             groupBox1.Location = new Point(12, 173);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(333, 147);
+            groupBox1.Size = new Size(264, 147);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             groupBox1.Text = "Havale";
@@ -174,26 +174,30 @@
             label10.TabIndex = 9;
             label10.Text = "Hesap No: ";
             // 
-            // Form2
+            // FormIslemler
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.CadetBlue;
-            ClientSize = new Size(420, 344);
+            ClientSize = new Size(298, 335);
             Controls.Add(groupBox1);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
+            Controls.Add(lblTCKimlikNo);
+            Controls.Add(lblTelefon);
+            Controls.Add(lblHesapNo);
+            Controls.Add(lblAdSoyad);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "Form2";
+            MaximizeBox = false;
+            Name = "FormIslemler";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form2";
+            Text = "İşlemler";
+            FormClosed += FormIslemler_FormClosed;
+            Load += FormIslemler_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
@@ -206,10 +210,10 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private Label label5;
-        private Label label6;
-        private Label label7;
-        private Label label8;
+        private Label lblAdSoyad;
+        private Label lblHesapNo;
+        private Label lblTelefon;
+        private Label lblTCKimlikNo;
         private GroupBox groupBox1;
         private MaskedTextBox mskHesapNo;
         private Label label10;

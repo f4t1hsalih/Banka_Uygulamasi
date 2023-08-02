@@ -122,6 +122,7 @@
             // txtSifre
             // 
             txtSifre.Location = new Point(107, 177);
+            txtSifre.MaxLength = 15;
             txtSifre.Name = "txtSifre";
             txtSifre.Size = new Size(138, 27);
             txtSifre.TabIndex = 5;
