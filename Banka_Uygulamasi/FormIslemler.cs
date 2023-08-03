@@ -83,10 +83,19 @@ namespace Banka_Uygulamasi
                 cmd2.Parameters.AddWithValue("@p2", mskHesapNo.Text);
                 cmd2.ExecuteNonQuery();
                 cnn.Close();
-                MessageBox.Show("İşlem Gerçekleşti");
-                Temizle();
 
+                //Hareket Tablosuna Kaydetme
+                cnn.Open();
+                SqlCommand cmd3 = new SqlCommand("insert into tbl_Hareketler (GonderenHN, AliciHN, Tutar) values (@p1,@p2,@p3)", cnn);
+                cmd3.Parameters.AddWithValue("@p1", HesapNo);
+                cmd3.Parameters.AddWithValue("@p2", mskHesapNo.Text);
+                cmd3.Parameters.AddWithValue("@p3", decimal.Parse(txtTutar.Text));
+                cmd3.ExecuteNonQuery();
+                cnn.Close();
+
+                MessageBox.Show("İşlem Gerçekleşti");
                 BakiyeCekme();
+                Temizle();
             }
 
         }
