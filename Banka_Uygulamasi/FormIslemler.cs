@@ -99,5 +99,12 @@ namespace Banka_Uygulamasi
             }
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormHesapHareketleri hesapHareketleri = new FormHesapHareketleri();
+            hesapHareketleri.HesapNo = this.HesapNo;
+            hesapHareketleri.ShowDialog();
+        }
     }
 }
