@@ -28,31 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dgwGelenMiktar = new DataGridView();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
-            dataGridView2 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgwGonderilenMiktar = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgwGelenMiktar).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgwGonderilenMiktar).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgwGelenMiktar
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(3, 24);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(388, 332);
-            dataGridView1.TabIndex = 0;
+            dgwGelenMiktar.AllowUserToAddRows = false;
+            dgwGelenMiktar.AllowUserToDeleteRows = false;
+            dgwGelenMiktar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgwGelenMiktar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgwGelenMiktar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgwGelenMiktar.Location = new Point(3, 24);
+            dgwGelenMiktar.Margin = new Padding(3, 4, 3, 4);
+            dgwGelenMiktar.Name = "dgwGelenMiktar";
+            dgwGelenMiktar.ReadOnly = true;
+            dgwGelenMiktar.RowTemplate.Height = 25;
+            dgwGelenMiktar.Size = new Size(388, 332);
+            dgwGelenMiktar.TabIndex = 0;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(dataGridView1);
+            groupBox1.Controls.Add(dgwGelenMiktar);
             groupBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox1.Location = new Point(12, 13);
             groupBox1.Margin = new Padding(3, 4, 3, 4);
@@ -61,11 +64,11 @@
             groupBox1.Size = new Size(394, 360);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Gelen Miktarlar";
+            groupBox1.Text = "Gelen Miktarlar (+)";
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(dataGridView2);
+            groupBox2.Controls.Add(dgwGonderilenMiktar);
             groupBox2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             groupBox2.Location = new Point(412, 13);
             groupBox2.Margin = new Padding(3, 4, 3, 4);
@@ -74,19 +77,22 @@
             groupBox2.Size = new Size(388, 360);
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
-            groupBox2.Text = "Gönderilen Miktarlar";
+            groupBox2.Text = "Gönderilen Miktarlar (-)";
             // 
-            // dataGridView2
+            // dgwGonderilenMiktar
             // 
-            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(3, 24);
-            dataGridView2.Margin = new Padding(3, 4, 3, 4);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(382, 332);
-            dataGridView2.TabIndex = 0;
+            dgwGonderilenMiktar.AllowUserToAddRows = false;
+            dgwGonderilenMiktar.AllowUserToDeleteRows = false;
+            dgwGonderilenMiktar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgwGonderilenMiktar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgwGonderilenMiktar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgwGonderilenMiktar.Location = new Point(3, 24);
+            dgwGonderilenMiktar.Margin = new Padding(3, 4, 3, 4);
+            dgwGonderilenMiktar.Name = "dgwGonderilenMiktar";
+            dgwGonderilenMiktar.ReadOnly = true;
+            dgwGonderilenMiktar.RowTemplate.Height = 25;
+            dgwGonderilenMiktar.Size = new Size(382, 332);
+            dgwGonderilenMiktar.TabIndex = 0;
             // 
             // FormHesapHareketleri
             // 
@@ -105,18 +111,18 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Hesap Hareketleri";
             Load += FormHesapHareketleri_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgwGelenMiktar).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgwGonderilenMiktar).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgwGelenMiktar;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private DataGridView dataGridView2;
+        private DataGridView dgwGonderilenMiktar;
     }
 }
