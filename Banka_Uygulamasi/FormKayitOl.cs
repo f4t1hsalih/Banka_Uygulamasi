@@ -23,13 +23,35 @@ namespace Banka_Uygulamasi
             txtAd.Focus();
         }
 
-        string HesapNoUret()
+        void HesapNoUret()
         {
             HesapNo = "0";
             Random rnd = new Random();
-            HesapNo = rnd.Next(100000, 1000000).ToString();
+            string degisken = rnd.Next(100000, 1000000).ToString();
+            while (HesapNoKontrol(degisken))
+            {
+                degisken = rnd.Next(100000, 1000000).ToString();
+            }
+            HesapNo = degisken;
             mskHesapNo.Text = HesapNo;
-            return HesapNo;
+        }
+
+        bool HesapNoKontrol(string degisken)
+        {
+            cnn.Open();
+            SqlCommand cmd = new SqlCommand("select Count(*) from tbl_Kisiler where HesapNo=@p1", cnn);
+            cmd.Parameters.AddWithValue("@p1", degisken);
+            int kayitSayisi = (int)cmd.ExecuteScalar();
+            cnn.Close();
+            if (kayitSayisi > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
         private void FormKayitOl_Load(object sender, EventArgs e)

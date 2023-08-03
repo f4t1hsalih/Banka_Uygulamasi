@@ -151,6 +151,7 @@
             mskHesapNo.Location = new Point(107, 144);
             mskHesapNo.Mask = "000000";
             mskHesapNo.Name = "mskHesapNo";
+            mskHesapNo.ReadOnly = true;
             mskHesapNo.Size = new Size(138, 27);
             mskHesapNo.TabIndex = 4;
             mskHesapNo.ValidatingType = typeof(int);
