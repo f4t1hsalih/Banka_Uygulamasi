@@ -34,9 +34,7 @@ namespace Banka_Uygulamasi
 
         private void FormIslemler_FormClosed(object sender, FormClosedEventArgs e)
         {
-            FormGiris giris = new FormGiris();
-            giris.Show();
-            this.Hide();
+            Application.Exit();
         }
 
         private void FormIslemler_Load(object sender, EventArgs e)
